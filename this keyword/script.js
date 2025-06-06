@@ -9,26 +9,26 @@
     7. this keyword inside an nested arrow function.
     8. this keyword inside the DOM Elements.
 */
-
+// "use strict";
 
 // 1. this keyword in global space.
 console.log(this);
 
 // 2. this keyword inside a function.
+    // - in non-strict mode this value is window object.
 function x(){
     console.log(this);
 }
 x();
 
 // 3. this keyword in non-strict mode (this substitution happens mostly).
-    // The original value of this keyword is undefined or null if this happens
+    // - The original value of this keyword is undefined or null if this happens
 
-    // "use strcitmode";
-
-    function x(){
-        console.log(this);
-    }
-    x();
+    //  - in strict mode this value is undefined..
+function x(){
+    console.log(this);
+}
+x();
 
 
 // 4. this keyword value depends on how the function is being called (window).
