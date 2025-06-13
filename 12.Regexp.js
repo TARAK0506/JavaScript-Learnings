@@ -16,6 +16,20 @@ JavaScript Regex :
 */
 
 // Creating a Regular Expression
-let regExp = /hi/;
+let regExp1 = /hi/;
 
 let regexp = new RegExp('hi');
+
+// Email Validation Regex
+
+
+const emailRegExp = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+const pattern = /^[a-zA-Z0-9.%_+-]+@[A-Za-z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+
+console.log(emailRegExp.test('tarakaramarao0506@gmail.com')); // true
+console.log(emailRegExp.test('tarakaramarao0506@gmail')); // false
+console.log(emailRegExp.test('tarakaramarao0506@gmailcom')); // false
+console.log(emailRegExp.test('tarakaramarao0506@gmail.')); // false
+console.log(emailRegExp.test('tarakaramarao0506@gmail.c')); 
+console.log(emailRegExp.test('tarakaramarao0506@gmail.c.rcdr'));
